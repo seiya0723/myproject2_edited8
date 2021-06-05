@@ -13,10 +13,15 @@ from .forms import TopicForm
 from django.db.models import Q
 
 #LoginRequiredMixinを引数に入れる。これで未認証ユーザーはアクセスできない
-#class BbsView(LoginRequiredMixin,View):
-class BbsView(View):
+class BbsView(LoginRequiredMixin,View):
+#class BbsView(View):
 
     def get(self, request, *args, **kwargs):
+
+        print(request.user.id)
+        print(request.user.last_name)
+        print(request.user.first_name)
+
 
         categories  = Category.objects.all()
 

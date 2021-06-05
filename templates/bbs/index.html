@@ -50,6 +50,11 @@
 
     <main>
 
+        <a href="{% url 'account_logout' %}">ログアウト</a>
+
+        <p>{{ request.user.last_name }} {{ request.user.first_name }}さん こんにちは</p>
+
+
         <h1 style="text-align: right">４月-April</h1>
 
         <form action="" method="get">

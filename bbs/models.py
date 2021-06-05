@@ -6,8 +6,8 @@ class Category(models.Model):
     class Meta:
         db_table = "category"
 
-    name = models.CharField(verbose_name="カテゴリ名",max_length=100)
-    dt =models.DateTimeField(verbose_name="追加日", default=timezone.now)
+    name    = models.CharField(verbose_name="カテゴリ名",max_length=100)
+    dt      = models.DateTimeField(verbose_name="追加日", default=timezone.now)
 
     def __str__(self):
         return self.name
